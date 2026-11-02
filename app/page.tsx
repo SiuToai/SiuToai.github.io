@@ -92,11 +92,7 @@ export default function Home() {
                   <p className="product-tagline">{product.tagline}</p>
                   <p className="product-description">{product.longDescription}</p>
                   <div className="product-actions">
-                    {product.playStoreUrl ? (
-                      <a className="button button-primary" href={product.playStoreUrl} target="_blank" rel="noreferrer">Get it on Google Play</a>
-                    ) : (
-                      <Link className="button button-primary" href={product.detailPath}>View app details</Link>
-                    )}
+                    <a className="button button-primary" href={product.playStoreUrl} target="_blank" rel="noreferrer">Get it on Google Play</a>
                     <Link className="text-link" href={product.detailPath}>Explore the app <span>→</span></Link>
                   </div>
                 </div>
@@ -113,8 +109,8 @@ export default function Home() {
 
           <div className="coming-soon">
             <div><span className="pulse-ring" /><p className="eyebrow">What’s next</p></div>
-            <h3>Nightmare Prank is preparing for Google Play.</h3>
-            <p>Its public app information, support details, and dedicated privacy policy are available now.</p>
+            <h3>Nightmare Prank is ready for its Google Play release.</h3>
+            <p>Its store link, public app information, support details, and dedicated privacy policy are available now.</p>
           </div>
         </div>
       </section>

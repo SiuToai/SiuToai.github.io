@@ -43,13 +43,14 @@ export const siteContent = {
       slug: 'nightmare-prank',
       category: 'Halloween prank entertainment',
       platform: 'Android',
-      badge: 'Coming to Google Play',
+      badge: 'Google Play listing',
       tagline: 'Build the perfect scare — then choose the moment.',
       shortDescription:
         'A Halloween prank studio with sudden horror faces, animated screen damage, moving crawlers, sound, vibration, and fully adjustable timing.',
       longDescription:
         'Nightmare Prank turns an Android screen into a controlled Halloween surprise. Choose from Western and Asian horror faces, animated broken-screen effects, water, fire, glitches, insects, and other moving overlays, then tune the delay, duration, intensity, sound, and vibration before starting the prank.',
-      playStoreUrl: '',
+      playStoreUrl:
+        'https://play.google.com/store/apps/details?id=com.stdev.nightmareprank',
       detailPath: '/apps/nightmare-prank',
       privacyPath: '/apps/nightmare-prank/privacy',
       packageName: 'com.stdev.nightmareprank',

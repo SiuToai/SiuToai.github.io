@@ -41,7 +41,7 @@ export default function NightmarePrankPage() {
           <p className="app-tagline">{nightmarePrankProduct.tagline}</p>
           <p className="app-summary">{nightmarePrankProduct.longDescription}</p>
           <div className="hero-actions">
-            <span className="button button-primary button-status">Google Play release in preparation</span>
+            <a className="button button-primary" href={nightmarePrankProduct.playStoreUrl} target="_blank" rel="noreferrer">View on Google Play</a>
             <Link className="button button-ghost" href={nightmarePrankProduct.privacyPath}>Privacy Policy</Link>
           </div>
           <p className="package-name">Package: {nightmarePrankProduct.packageName}</p>
@@ -103,9 +103,9 @@ export default function NightmarePrankPage() {
       </section>
 
       <section className="download-cta section-shell">
-        <p className="eyebrow">Coming to Google Play</p>
+        <p className="eyebrow">Google Play</p>
         <h2>Build the scare.<br />Keep the control.</h2>
-        <Link className="button button-primary" href="/support">Contact support</Link>
+        <a className="button button-primary" href={nightmarePrankProduct.playStoreUrl} target="_blank" rel="noreferrer">Open Google Play</a>
       </section>
       <SiteFooter />
     </main>
