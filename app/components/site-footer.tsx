@@ -12,6 +12,7 @@ export function SiteFooter() {
         <p>{siteContent.brand.tagline}</p>
         <div className="footer-links">
           <Link href="/#developer">Developer</Link>
+          <Link href="/apps/nightmare-prank">Nightmare Prank</Link>
           <Link href="/apps/prank-studio">Prank Studio</Link>
           <Link href="/support">Support</Link>
           <a href={siteContent.brand.telegramUrl} target="_blank" rel="noreferrer">Telegram</a>

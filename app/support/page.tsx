@@ -15,14 +15,14 @@ export default function SupportPage() {
       <section className="simple-hero section-shell">
         <p className="eyebrow">SmallTap support</p>
         <h1>How can we help?</h1>
-        <p>Quick answers for Prank Studio, plus a direct way to reach the developer.</p>
+        <p>Quick answers for Prank Studio and Nightmare Prank, plus a direct way to reach the developer.</p>
         <div className="hero-actions">
           <a className="button button-primary" href={`mailto:${siteContent.brand.supportEmail}`}>Email support</a>
           <a className="button button-ghost" href={siteContent.brand.telegramUrl} target="_blank" rel="noreferrer">Telegram {siteContent.brand.telegramHandle}</a>
         </div>
       </section>
       <section className="faq-section section-shell section-pad">
-        <div className="section-heading"><p className="eyebrow">Frequently asked</p><h2>Prank Studio help</h2></div>
+        <div className="section-heading"><p className="eyebrow">Frequently asked</p><h2>SmallTap app help</h2></div>
         <div className="faq-list">
           {siteContent.faqs.map((faq, index) => (
             <details key={faq.question} open={index === 0}>

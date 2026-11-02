@@ -10,7 +10,7 @@ export const siteContent = {
     supportEmail: 'siutoai.st@gmail.com',
     telegramHandle: '@siutoai',
     telegramUrl: 'https://t.me/siutoai',
-    lastUpdated: 'September 26, 2026',
+    lastUpdated: 'November 2, 2026',
   },
   developer: {
     name: 'SiuToai',
@@ -38,7 +38,67 @@ export const siteContent = {
   ],
   products: [
     {
+      name: 'Nightmare Prank',
+      initials: 'NP',
+      slug: 'nightmare-prank',
+      category: 'Halloween prank entertainment',
+      platform: 'Android',
+      badge: 'Coming to Google Play',
+      tagline: 'Build the perfect scare — then choose the moment.',
+      shortDescription:
+        'A Halloween prank studio with sudden horror faces, animated screen damage, moving crawlers, sound, vibration, and fully adjustable timing.',
+      longDescription:
+        'Nightmare Prank turns an Android screen into a controlled Halloween surprise. Choose from Western and Asian horror faces, animated broken-screen effects, water, fire, glitches, insects, and other moving overlays, then tune the delay, duration, intensity, sound, and vibration before starting the prank.',
+      playStoreUrl: '',
+      detailPath: '/apps/nightmare-prank',
+      privacyPath: '/apps/nightmare-prank/privacy',
+      packageName: 'com.stdev.nightmareprank',
+      effectCount: '51',
+      features: [
+        '51 pranks across Horror, Screen, and Crawlers collections',
+        'Western and Asian-inspired horror faces with sudden jumpscare animation',
+        'Animated cracked glass, water, fire, glitch, lines, and screen damage',
+        'Moving insects, mosquitoes, flies, loose hair, and transparent overlays',
+        'Fullscreen and Display over other apps modes with clear exit controls',
+        'Adjustable surprise delay, display time, intensity, sound, and vibration',
+        'Optional rewarded videos that permanently unlock eligible effects on the device',
+      ],
+      safetyNotes: [
+        'Every prank is selected and started by the user, with visible stop controls.',
+        'Horror effects can appear suddenly with sound and vibration. Do not use them around people with heart conditions, epilepsy, severe anxiety, or a strong sensitivity to flashing or startling content.',
+        'Overlay permission is used only to draw the selected effect above other apps. Nightmare Prank does not read or capture the content underneath.',
+        'The app does not request camera, microphone, location, contacts, or photo-library access.',
+      ],
+      screenshots: [
+        {
+          src: '/screenshots/nightmare-prank-studio.png',
+          alt: 'Nightmare Prank Studio screen showing the Black Eyes horror effect',
+        },
+        {
+          src: '/screenshots/nightmare-prank-horror-unlock.png',
+          alt: 'Nightmare Prank rewarded video unlock screen for Ghost Bride',
+        },
+        {
+          src: '/screenshots/nightmare-prank-screen-effects.png',
+          alt: 'Nightmare Prank animated broken screen, water, and fire effects',
+        },
+        {
+          src: '/screenshots/nightmare-prank-crawlers.png',
+          alt: 'Nightmare Prank moving crawler and insect effects',
+        },
+        {
+          src: '/screenshots/nightmare-prank-crawler-unlock.png',
+          alt: 'Nightmare Prank rewarded video unlock screen for Mosquito on Glass',
+        },
+        {
+          src: '/screenshots/nightmare-prank-setup.png',
+          alt: 'Nightmare Prank control room for intensity, duration, delay, sound, and vibration',
+        },
+      ],
+    },
+    {
       name: 'Prank Studio',
+      initials: 'PS',
       slug: 'prank-studio',
       category: 'Visual entertainment',
       platform: 'Android',
@@ -51,6 +111,7 @@ export const siteContent = {
       playStoreUrl:
         'https://play.google.com/store/apps/details?id=com.stdev.prankstudio',
       detailPath: '/apps/prank-studio',
+      privacyPath: '/privacy',
       packageName: 'com.stdev.prankstudio',
       effectCount: '23',
       features: [
@@ -89,24 +150,24 @@ export const siteContent = {
   ],
   faqs: [
     {
-      question: 'Can the effects damage my screen?',
+      question: 'Can these effects damage my screen?',
       answer:
-        'No. Prank Studio only displays visual simulations. It does not change, repair, diagnose, or physically affect the screen.',
+        'No. SmallTap prank apps only display visual simulations. They do not change, repair, diagnose, or physically affect the screen.',
     },
     {
       question: 'Why does the app request “Display over other apps”?',
       answer:
-        'That permission enables Transparent Overlay mode. It is used only to draw the chosen effect above other apps. Prank Studio does not read or capture the content underneath.',
+        'That permission enables Overlay mode. It is used only to draw the chosen effect above other apps. Our apps do not read or capture the content underneath.',
     },
     {
       question: 'How do I stop an effect?',
       answer:
-        'A fullscreen effect can be closed by tapping three times quickly. A transparent overlay can be stopped from the app, its persistent notification, or automatically when the timer ends.',
+        'A fullscreen effect can be closed by tapping three times quickly. An overlay can be stopped from the app, its persistent notification, or automatically when the timer ends.',
     },
     {
       question: 'Does the app contain advertising?',
       answer:
-        'Yes. Prank Studio contains ads, and some optional effects may be permanently unlocked on the device by choosing to watch a rewarded ad.',
+        'Yes. Our prank apps contain ads, and some optional effects may be permanently unlocked on the device by choosing to watch a rewarded ad.',
     },
     {
       question: 'I found a problem. How can I report it?',
@@ -116,4 +177,6 @@ export const siteContent = {
   ],
 } as const;
 
-export const primaryProduct = siteContent.products[0];
+export const nightmarePrankProduct = siteContent.products[0];
+export const prankStudioProduct = siteContent.products[1];
+export const primaryProduct = nightmarePrankProduct;

@@ -21,7 +21,7 @@ export default function Home() {
           <div className="hero-note"><span className="status-dot" />Thoughtfully built for Android</div>
         </div>
 
-        <div className="hero-visual" aria-label="Prank Studio app preview">
+        <div className="hero-visual hero-nightmare" aria-label={`${primaryProduct.name} app preview`}>
           <div className="orbit orbit-one" />
           <div className="orbit orbit-two" />
           <div className="phone phone-back">
@@ -31,7 +31,7 @@ export default function Home() {
             <Image src={primaryProduct.screenshots[0].src} alt={primaryProduct.screenshots[0].alt} fill sizes="300px" priority />
           </div>
           <div className="floating-chip chip-effects"><strong>{primaryProduct.effectCount}</strong><span>visual effects</span></div>
-          <div className="floating-chip chip-safe"><span className="tiny-dot" />Safe visual fun</div>
+          <div className="floating-chip chip-safe"><span className="tiny-dot" />User-controlled scares</div>
         </div>
       </section>
 
@@ -78,35 +78,43 @@ export default function Home() {
         <div className="section-shell">
           <div className="section-heading product-heading">
             <div><p className="eyebrow">Our products</p><h2>Made to earn<br />a place on your screen.</h2></div>
-            <p>One clear idea at a time. Our first release turns familiar screen mishaps into safe, controllable visual entertainment.</p>
+            <p>From sudden Halloween scares to realistic screen mishaps, every effect is designed to be adjustable, transparent, and easy to stop.</p>
           </div>
 
-          <article className="featured-product">
-            <div className="product-copy">
-              <div className="product-labels"><span>{primaryProduct.badge}</span><span>{primaryProduct.platform}</span></div>
-              <div className="product-icon" aria-hidden="true"><span>PS</span><i /><i /><i /></div>
-              <p className="product-category">{primaryProduct.category}</p>
-              <h3>{primaryProduct.name}</h3>
-              <p className="product-tagline">{primaryProduct.tagline}</p>
-              <p className="product-description">{primaryProduct.longDescription}</p>
-              <div className="product-actions">
-                <a className="button button-primary" href={primaryProduct.playStoreUrl} target="_blank" rel="noreferrer">Get it on Google Play</a>
-                <Link className="text-link" href={primaryProduct.detailPath}>Explore the app <span>→</span></Link>
-              </div>
-            </div>
-            <div className="screenshot-rack" aria-label="Prank Studio screenshots">
-              {primaryProduct.screenshots.slice(0, 3).map((screenshot, index) => (
-                <div className={`screenshot-card shot-${index + 1}`} key={screenshot.src}>
-                  <Image src={screenshot.src} alt={screenshot.alt} fill sizes="(max-width: 700px) 55vw, 230px" />
+          <div className="products-stack">
+            {siteContent.products.map((product) => (
+              <article className={`featured-product product-${product.slug}`} key={product.slug}>
+                <div className="product-copy">
+                  <div className="product-labels"><span>{product.badge}</span><span>{product.platform}</span></div>
+                  <div className={`product-icon ${product.slug === 'nightmare-prank' ? 'nightmare' : ''}`} aria-hidden="true"><span>{product.initials}</span><i /><i /><i /></div>
+                  <p className="product-category">{product.category}</p>
+                  <h3>{product.name}</h3>
+                  <p className="product-tagline">{product.tagline}</p>
+                  <p className="product-description">{product.longDescription}</p>
+                  <div className="product-actions">
+                    {product.playStoreUrl ? (
+                      <a className="button button-primary" href={product.playStoreUrl} target="_blank" rel="noreferrer">Get it on Google Play</a>
+                    ) : (
+                      <Link className="button button-primary" href={product.detailPath}>View app details</Link>
+                    )}
+                    <Link className="text-link" href={product.detailPath}>Explore the app <span>→</span></Link>
+                  </div>
                 </div>
-              ))}
-            </div>
-          </article>
+                <div className="screenshot-rack" aria-label={`${product.name} screenshots`}>
+                  {product.screenshots.slice(0, 3).map((screenshot, index) => (
+                    <div className={`screenshot-card shot-${index + 1}`} key={screenshot.src}>
+                      <Image src={screenshot.src} alt={screenshot.alt} fill sizes="(max-width: 700px) 55vw, 230px" />
+                    </div>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
 
           <div className="coming-soon">
             <div><span className="pulse-ring" /><p className="eyebrow">What’s next</p></div>
-            <h3>More small ideas are already taking shape.</h3>
-            <p>Future apps and games will appear here as the SmallTap collection grows.</p>
+            <h3>Nightmare Prank is preparing for Google Play.</h3>
+            <p>Its public app information, support details, and dedicated privacy policy are available now.</p>
           </div>
         </div>
       </section>

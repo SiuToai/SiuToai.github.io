@@ -1,6 +1,6 @@
 # SmallTap Studio website
 
-Website chính thức của SmallTap Studio, đồng thời là nền tảng portfolio dành cho nhà phát triển đứng sau thương hiệu. Website gồm trang giới thiệu, sản phẩm Prank Studio, hỗ trợ, Chính sách quyền riêng tư, Điều khoản sử dụng và `app-ads.txt`.
+Website chính thức của SmallTap Studio, đồng thời là nền tảng portfolio dành cho nhà phát triển đứng sau thương hiệu. Website gồm trang giới thiệu, sản phẩm Prank Studio và Nightmare Prank, hỗ trợ, Chính sách quyền riêng tư, Điều khoản sử dụng và `app-ads.txt`.
 
 ## Những chỗ thường cần cập nhật
 
@@ -8,7 +8,8 @@ Website chính thức của SmallTap Studio, đồng thời là nền tảng por
 - Nội dung xác minh AdMob: `public/app-ads.txt`
 - Ảnh chụp ứng dụng: `public/screenshots/`
 - Ảnh hiển thị khi chia sẻ website: `public/og.png`
-- Nội dung chính sách: `app/privacy/page.tsx` và `app/terms/page.tsx`
+- Nội dung chính sách chung: `app/privacy/page.tsx` và `app/terms/page.tsx`
+- Trang và chính sách riêng của Nightmare Prank: `app/apps/nightmare-prank/`
 
 Khi thay ảnh, có thể giữ nguyên tên file hiện tại để không cần sửa mã nguồn. Khi thêm ứng dụng mới, thêm dữ liệu vào `products` trong `app/site-content.ts`, rồi tạo một trang mới trong `app/apps/` dựa trên trang Prank Studio hiện có.
 
